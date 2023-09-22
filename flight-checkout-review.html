@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap-reboot.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/global.css" />
+    <link rel="stylesheet" href="./assets/styles/flight-checkout-review.css" />
+</head>
+
+<body>
+    <div class="app-wrapper">
+        <header style="border-bottom: 2px dashed #ccc; min-height: 64px; text-align: center;">
+            <h4>I am Header. Delete me yah!!!</h4>
+        </header>
+
+        <!-- Hero Section / Steps??? -->
+        <section class="hero">
+            <div class="app-container">
+                <div class="steps-row">
+                    <div class="step complete">
+                        <span class="step-label">Booking</span>
+                        <span class="step-icon">
+                            <span class="step-icon-circle"></span>
+                        </span>
+                    </div>
+
+                    <div class="step-connector">
+                        <span class="step-connector-line"></span>
+                    </div>
+
+                    <div class="step complete">
+                        <span class="step-label">Payment</span>
+                        <span class="step-icon">
+                            <span class="step-icon-circle"></span>
+                        </span>
+                    </div>
+
+                    <div class="step-connector">
+                        <span class="step-connector-line"></span>
+                    </div>
+
+                    <div class="step">
+                        <span class="step-label">Complete</span>
+                        <span class="step-icon">
+                            <span class="step-icon-circle"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main -->
+        <main class="main">
+            <div class="app-container">
+                <div class="flex-row content-wrapper">
+                    <!-- Content -->
+                    <div class="content">
+                        <!-- Back Button -->
+                        <button class="back-button">
+                            <span class="material-symbols-outlined back-icon">chevron_left</span>
+                            <span>Back to Flight Search</span>
+                        </button>
+
+                        <!-- Insurance -->
+                        <div class="insurance-card">
+                            <div class="card-header">
+                                <h2 class="title">
+                                    TRAVEL <span class="emphasis">INSURANCE</span>
+                                </h2>
+                            </div>
+
+                            <div class="card-body">
+                                <div class="summary flex-row">
+                                    <ul class="benefit-list">
+                                        <li>Trip Refund, get up to 100% back</li>
+                                        <li>Personal Accident Reimbursement</li>
+                                    </ul>
+
+                                    <ul class="benefit-list">
+                                        <li>Flight Delay - Get Cash</li>
+                                        <li>Baggage Delay Compensation</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="card-footer flex-row">
+                                <a class="view-more" href="#">view travel insurance benefits</a>
+
+                                <button class="button action-button">
+                                    <i class="icon-check"></i>
+                                    <span class="get-protection-usd">Get Protection, USD 5.4 /person</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Cancellation Policy -->
+                        <div class="accordion-root">
+                            <div class="accordion-summary accordion-button">
+                                <span class="text">Cancellation Policy</span>
+                                <span class="material-symbols-outlined more-icon">expand_more</span>
+                            </div>
+                        </div>
+
+                        <!-- Login / Register -->
+                        <div class="accordion-root">
+                            <div class="accordion-summary">
+                                <span class="text">Already have an account? Please <a href="#">Login</a> or <a href="#">Register</a> to retrieve and save contacts.</span>
+                            </div>
+                        </div>
+
+                        <!-- Baggage Addons -->
+                        <div class="card baggage-addons">
+                            <div class="summary">
+                                <p>Travel Add-ons</p>
+                            </div>
+
+                            <div class="flex-row">
+                                <div class="description">
+                                    <span class="icon-suitcase-purchase"></span>
+                                    <div class="text">
+                                        <p class="subtitle">Baggage</p>
+                                        <span class="caption">More room for your personal items</span>
+                                    </div>
+                                </div>
+
+                                <div class="action">
+                                    <button>Add/Modify</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Passenger Information -->
+                        <div class="section-form passengers">
+                            <h2 class="section-title">Passenger Information</h2>
+
+                            <div class="field-label">
+                                PASSENGER 1
+                            </div>
+
+                            <div class="flex-row form-row">
+                                <div class="left-col">
+                                    <label for="passenger1_Salutation" class="form-label">Title</label>
+                                    <select id="passenger1_Salutation" class="form-select">
+                                        <option selected>Choose...</option>
+                                        <option>Mr.</option>
+                                        <option>Mrs.</option>
+                                        <option>Ms.</option>
+                                    </select>
+                                </div>
+
+                                <div class="right-col">
+                                    <div class="flex-row form-row">
+                                        <div class="col">
+                                            <label for="passenger1_FirstName" class="form-label">First name</label>
+                                            <input type="text" class="form-control" id="passenger1_FirstName">
+                                        </div>
+
+                                        <div class="col">
+                                            <label for="passenger1_LastName" class="form-label">Last name</label>
+                                            <input type="text" class="form-control" id="passenger1_LastName">
+                                        </div>
+                                    </div>
+
+                                    <div class="flex-row">
+                                        <label for="passenger1_Nationality" class="form-label">Nationality</label>
+                                        <select id="passenger1_Nationality" class="form-select">
+                                            <option selected>Select Country</option>
+                                            <option>Indonesia</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Frequent Flyer -->
+                            <div class="accordion-root frequent-flyer">                                
+                                <div class="accordion-summary accordion-button">
+                                    <a data-bs-toggle="collapse" href="#frequentFlyer_Collapse" class="collapsed" aria-expanded="false" aria-controls="frequentFlyer_Collapse">
+                                        <span>more options (meal, frequent flyer)</span>
+                                        <span class="material-symbols-outlined more-icon">expand_more</span>
+                                    </a>
+                                </div>
+
+                                <div id="frequentFlyer_Collapse" class="collapse">
+                                    <div class="form-row flex-row">
+                                        <div class="col">
+                                            <label for="meal" class="form-label">Preferred Meal</label>
+                                            <select id="meal" class="form-select">
+                                                <option selected>Standard Meal</option>
+                                                <option>Vegetarian Hindu Meal</option>
+                                                <option>Baby Meal</option>
+                                                <option>Bland Meal</option>
+                                                <option>Child Meal</option>
+                                                <option>Fruit Platter Meal</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col">
+                                            <label for="ffProgram" class="form-label">Frequent Flyer Program</label>
+                                            <select id="ffProgram" class="form-select">
+                                                <option selected>Select Program...</option>
+                                                <option>Garuda Indonesia</option>
+                                                <option>Singapore Airlines KrisFlyer</option>
+                                                <option>Malaysia Airlines - Enrich</option>
+                                                <option>Cathay Pacific Asia Miles</option>
+                                                <option>Adria Miles & More</option>
+                                                <option>Aegean Miles & Bonus</option>
+                                                <option>Aer Arann Silver Club</option>
+                                                <option>Aer Lingus Gold Circle Club</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col">
+                                            <label for="ffNumber" class="form-label">Frequent Flyer Number</label>
+                                            <input type="text" class="form-control" id="ffNumber">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Main Trip Contact -->
+                        <div class="section-form main-trip-contact">
+                            <div>
+                                <h2 class="section-title">Main Trip Contact</h2>
+                                <span class="desc">This person will be contacted in case of changes in travel arrangements</span>
+                            </div>
+
+                            <div class="flex-row form-row">
+                                <div class="left-col">
+                                    <label for="contact_Salutation" class="form-label">Title</label>
+                                    <select id="contact_Salutation" class="form-select">
+                                        <option selected>Choose...</option>
+                                        <option>Mr.</option>
+                                        <option>Mrs.</option>
+                                        <option>Ms.</option>
+                                    </select>
+                                </div>
+
+                                <div class="right-col">
+                                    <div class="flex-row form-row">
+                                        <div class="col">
+                                            <label for="contact_FirstName" class="form-label">First name</label>
+                                            <input type="text" class="form-control" id="contact_FirstName">
+                                        </div>
+
+                                        <div class="col">
+                                            <label for="contact_LastName" class="form-label">Last name</label>
+                                            <input type="text" class="form-control" id="contact_LastName">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex-row form-row">
+                                <div class="left-col">
+                                    <label for="contact_CountryCode" class="form-label">Country Code</label>
+                                    <select id="contact_CountryCode" class="form-select">
+                                        <option selected>+62</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+
+                                <div class="right-col">
+                                    <div class="flex-row form-row">
+                                        <div class="col">
+                                            <label for="contactFirstName" class="form-label">Phone Number</label>
+                                            <input type="tel" class="form-control" id="contactFirstName">
+                                        </div>
+
+                                        <div class="col">
+                                            <label for="contact_Nationality" class="form-label">Nationality</label>
+                                            <select id="contact_Nationality" class="form-select">
+                                                <option selected>Select Country</option>
+                                                <option>Indonesia</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="flex-row form-row">
+                                        <div class="col">
+                                            <label for="contact_Email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="contact_Email">
+                                            <span class="helper">Email address to receive travel documents</span>
+                                        </div>
+                                        <div class="col">
+                                            <label for="contact_Verify_Email" class="form-label">Verify Email</label>
+                                            <input type="email" class="form-control" id="contact_Verify_Email">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Passenger List -->
+                        <div class="card passenger-list">
+                            <div class="flex-row">
+                                <span class="material-symbols-outlined info-icon">info</span>
+                                <div class="text">
+                                    <h4 class="subtitle">Passenger List</h4>
+                                    <p>names must match passport or id (from passenger information above, format: Title + First & Middle Name + Last/Family Name)</p>
+                                </div>
+                            </div>
+
+                            <ul>
+                                <li>We cannot trust customers</li>
+                            </ul>
+                        </div>
+
+                        <!-- Payment -->
+                        <div class="section-form payment">
+                            <!-- Section Title -->
+                            <div class="section-title">
+                                <h2>Payment Method</h2>
+
+                                <div class="subtitle">
+                                    <span class="section-title text-muted">Please choose your payment method</span>
+
+                                    <select id="currency" class="form-select">
+                                        <option value="USD" selected>US Dollar</option>
+                                        <option value="IDR">Indonesia Rupiah</option>
+                                        <option value="IDR">New Zealand Dollar</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Payment Group -->
+                            <div class="payment-group" id="paymentGroup">
+                                <!-- Credit Card -->
+                                <div class="payment-item credit-card">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" value="creditcard" checked>
+                                    <label for="creditCard" class="form-check-label" data-bs-toggle="collapse" data-bs-target="#creditCard_Content" aria-expanded="true" aria-controls="creditCard_Content">
+                                        <span>Credit Card / Debit </span>
+                                    </label>
+
+                                    <div id="creditCard_Content" class="payment-content collapse show" data-bs-parent="#paymentGroup">
+                                        <div class="payment-content-body">
+                                            <div class="flex-row amount-row">
+                                                <div class="col">
+                                                    <h4 class="label">Total Amount</h4>
+                                                    <p class="helper">Include platform fee: IDR 10,000</p>
+                                                </div>
+
+                                                <div class="col text-right">
+                                                    <h3 class="price-value">IDR 1,601,031</h3>
+                                                    <p class="helper">Card will be charged IDR 1,601,031</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="payment-form">
+                                                <div class="col left-col">
+                                                    <div class="input-col">
+                                                        <div class="label-container">
+                                                            <label for="ccHolderName" class="form-label">Card Holder Name</label>
+                                                            <select class="form-select" id="selectTraveller">
+                                                                <option>Select traveller name</option>
+                                                                <option>Select traveller name</option>
+                                                                <option>Select traveller name</option>
+                                                            </select>
+                                                        </div>
+                                                        <input type="text" class="form-control" id="ccHolderName">
+                                                    </div>
+
+                                                    <div class="input-col">
+                                                        <label for="ccNumber" class="form-label">Card Number</label>
+                                                        <input type="text" class="form-control" id="ccNumber">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col right-col">
+                                                    <div class="input-col">
+                                                        <label for="ccExpiry" class="form-label">Expiry Date</label>
+                                                        <input type="text" class="form-control" id="ccExpiry" style="max-width: 135px;">
+                                                    </div>
+
+                                                    <div class="cvc-col">
+                                                        <div class="input-col">
+                                                            <div class="label-container">
+                                                                <label for="cvc" class="form-label">Card Number</label>
+                                                                <span class="material-symbols-outlined">help</span>
+                                                            </div>
+
+                                                            <input type="text" class="form-control" id="cvc" style="max-width: 135px;">
+                                                        </div>
+
+                                                        <img src="./assets/images/cvv-card.png" width="46" height="28">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="amex-fee-alert flex-row">
+                                                <span class="material-symbols-outlined info-icon">info</span>
+                                                <p>American Express convenience fee IDR 10,109</p>
+                                            </div>
+
+                                            <p class="caption">NusaTrip has implemented security protocols (3DS) MasterCard SecureCode, Verified by Visa, JCB J/Secure & American Express SafeKey. If your card supports this features, please make sure you are able receive any notification your bank might send you (usually by SMS).</p>
+
+                                            <div class="flex-row footer">
+                                                <img src="https://ssl.nusatrip.com/static/img/front/V3/checkout/cc-payments-02.png">
+
+                                                <img src="https://ssl.nusatrip.com/static/img/front/V3/checkout/cc-payments-secure.png" height="26" style="height: 26px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Bank Transfer -->
+                                <div class="payment-item bank-transfer">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" id="bankTransfer" value="banktransfer">
+                                    <label for="bankTransfer" class="form-check-label collapsed" data-bs-toggle="collapse" data-bs-target="#bankTransfer_Content" aria-expanded="false" aria-controls="bankTransfer_Content">
+                                        <span>ATM & Transfer </span>
+                                    </label>
+
+                                    <div id="bankTransfer_Content" class="payment-content collapse" data-bs-parent="#paymentGroup">
+                                        <!-- Payment Body -->
+                                        <div class="payment-content-body">
+                                            <div class="flex-row amount-row">
+                                                <div class="col">
+                                                    <h4 class="label">Total Amount</h4>
+                                                    <p class="helper">Include platform fee: IDR 10,000</p>
+                                                </div>
+
+                                                <div class="col text-right">
+                                                    <h3 class="price-value">IDR 1,601,031</h3>
+                                                </div>
+                                            </div>
+
+                                            <!-- Bank List -->
+                                            <div class="payment-form bank-transfer-list">
+                                                <!-- ATM Bersama -->
+                                                <div class="bank-transfer-item">
+                                                    <div class="input-row">
+                                                        <input class="form-check-input" type="radio" name="bankTransfer" id="atmBersama" value="atmBersama">
+
+                                                        <label for="atmBersama" class="form-check-label">
+                                                            <span>ATM Bersama</span>
+                                                            <img src="https://ssl.nusatrip.com/static/img/front/V3/payment/atmbersama-prima-alto.png">
+                                                        </label>
+
+                                                        <span class="material-symbols-outlined info-icon">help</span>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Maybank -->
+                                                <div class="bank-transfer-item">
+                                                    <div class="input-row">
+                                                        <input class="form-check-input" type="radio" name="bankTransfer" id="Maybank" value="Maybank">
+
+                                                        <label for="Maybank" class="form-check-label">
+                                                            <span>Maybank</span>
+                                                            <img src="https://ssl.nusatrip.com/static/img/front/V3/payment/maybank-icon.png">
+                                                        </label>
+
+                                                        <span class="material-symbols-outlined info-icon">help</span>
+                                                    </div>
+                                                </div>
+
+                                                <!-- BCA Virtual Account -->
+                                                <div class="bank-transfer-item">
+                                                    <div class="input-row">
+                                                        <input class="form-check-input" type="radio" name="bankTransfer" id="BcaVirtual" value="BcaVirtual">
+
+                                                        <label for="BcaVirtual" class="form-check-label">
+                                                            <span>BCA Virtual Account</span>
+                                                            <img src="https://ssl.nusatrip.com/static/img/front/V3/payment/bca-va.png">
+                                                        </label>
+
+                                                        <span class="material-symbols-outlined info-icon">help</span>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Bank BRI -->
+                                                <div class="bank-transfer-item">
+                                                    <div class="input-row">
+                                                        <input class="form-check-input" type="radio" name="bankTransfer" id="bankBri" value="bankBri">
+
+                                                        <label for="bankBri" class="form-check-label">
+                                                            <span>Bank BRI</span>
+                                                            <img src="https://ssl.nusatrip.com/static/img/front/V3/payment/nusaBRI.png" height="18" width="84">
+                                                        </label>
+
+                                                        <span class="material-symbols-outlined info-icon">help</span>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Bank Mandiri -->
+                                                <div class="bank-transfer-item">
+                                                    <div class="input-row">
+                                                        <input class="form-check-input" type="radio" name="bankTransfer" id="bankMandiri" value="bankMandiri">
+
+                                                        <label for="bankMandiri" class="form-check-label">
+                                                            <span>Bank Mandiri</span>
+                                                            <img src="https://ssl.nusatrip.com/static/img/front/V3/payment/mandiri-icon.png">
+                                                        </label>
+
+                                                        <span class="material-symbols-outlined info-icon">help</span>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Bank CIMB -->
+                                                <div class="bank-transfer-item">
+                                                    <div class="input-row">
+                                                        <input class="form-check-input" type="radio" name="bankTransfer" id="bankCimb" value="bankCimb">
+
+                                                        <label for="bankCimb" class="form-check-label">
+                                                            <span>Bank CIMB</span>
+                                                            <img src="https://ssl.nusatrip.com/static/img/front/V3/payment/nusaCIMB.png" height="12" width="68">
+                                                        </label>
+
+                                                        <span class="material-symbols-outlined info-icon">help</span>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Bank BNI -->
+                                                <div class="bank-transfer-item">
+                                                    <div class="input-row">
+                                                        <input class="form-check-input" type="radio" name="bankTransfer" id="bankBni" value="bankBni">
+
+                                                        <label for="bankBni" class="form-check-label">
+                                                            <span>Bank BNI</span>
+                                                            <img src="https://ssl.nusatrip.com/static/img/front/V3/payment/nusaBNI.png">
+                                                        </label>
+
+                                                        <span class="material-symbols-outlined info-icon">help</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="caption">
+                                                <p><strong>Bank Transfer payment term:</strong></p>
+                                                <ul>
+                                                    <li>We only accept direct real-time payment from banks or network listed above.</li>
+                                                    <li>Unpaid bookings will be automatically cancelled after the payment time limit.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <!-- Payment Footer / Time Limit -->
+                                        <div class="payment-content-footer">
+                                            <span class="material-symbols-outlined info-icon">info</span>
+                                            Payment time limit MAX 2 Hours, exact time in booking confirmation, on the next page
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Online Banking -->
+                                <div class="payment-item online-banking">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" id="onlineBanking" value="onlineBanking">
+                                    <label for="onlineBanking" class="form-check-label collapsed" data-bs-toggle="collapse" data-bs-target="#onlineBanking_Content" aria-expanded="false" aria-controls="onlineBanking_Content">
+                                        <span>Online Banking</span>
+                                    </label>
+
+                                    <div id="onlineBanking_Content" class="payment-content collapse" data-bs-parent="#paymentGroup">
+                                        <!-- Payment Body -->
+                                        <div class="payment-content-body">
+                                            <div class="flex-row amount-row">
+                                                <div class="col">
+                                                    <h4 class="label">Total Amount</h4>
+                                                    <p class="helper">Include platform fee: IDR 10,000</p>
+                                                </div>
+
+                                                <div class="col text-right">
+                                                    <h3 class="price-value">IDR 1,601,031</h3>
+                                                </div>
+                                            </div>
+
+                                            <div class="payment-form online-bank-list">
+                                                <!-- BCA Klikpay -->
+                                                <div class="online-bank-item bca-klikpay">
+                                                    <label for="bcaKlikpay" class="form-control-label">
+                                                        <span class="text-label">BCA Klikpay</span>
+                                                        <img src="https://ssl.nusatrip.com/static/img/front/V2/bcaClickPay.png" width="94">
+                                                        <span class="material-symbols-outlined">chevron_right</span>
+                                                    </label>
+
+                                                    <input class="form-check-input" type="checkbox" id="bcaKlikpay" value="bcaKlikpay">
+
+                                                    <div class="online-bank-content">
+                                                        <div class="flex-row content-nav">
+                                                            <label for="bcaKlikpay" class="form-check-label">
+                                                                <span class="material-symbols-outlined">chevron_left</span>
+                                                                <span>Change</span>
+                                                            </label>
+
+                                                            <img src="https://ssl.nusatrip.com/static/img/front/V2/bcaClickPay.png" width="94">
+                                                        </div>
+
+                                                        <div class="alert">
+                                                            We will redirect you to BCAKlikPay website after confirming your booking.
+                                                        </div>
+
+                                                        <ul>
+                                                            <li>Make sure you have registered for KlikPay ! It is different than KlikBCA and requires a specific activation before you can use it.</li>
+                                                            <li>More information about registration, activation, and payment using BCA KlikPay can be accessed at www.klikbca.com/klikpay and Halo BCA 500888 or (021) 500888 via mobile phone.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Klik BCA -->
+                                                <div class="online-bank-item klik-bca">
+                                                    <label for="klikBca" class="form-control-label">
+                                                        <span class="text-label">Klik BCA</span>
+                                                        <img src="https://ssl.nusatrip.com/static/img/front/V2/klik-bca.png" width="40">
+                                                        <span class="material-symbols-outlined">chevron_right</span>
+                                                    </label>
+
+                                                    <input class="form-check-input" type="checkbox" id="klikBca" value="klikBca">
+
+                                                    <div class="online-bank-content">
+                                                        <div class="flex-row content-nav">
+                                                            <label for="klikBca" class="form-check-label">
+                                                                <span class="material-symbols-outlined">chevron_left</span>
+                                                                <span>Change</span>
+                                                            </label>
+                                                            <img src="https://ssl.nusatrip.com/static/img/front/V2/klik-bca.png" width="40">
+                                                        </div>
+
+                                                        <div class="flex-row form-row">
+                                                            <label for="klikBca_userId">Klik BCA user ID</label>
+                                                            <div class="col">
+                                                                <input type="text" class="form-control" id="klikBca_userId">
+                                                            </div>
+                                                        </div>
+
+                                                        <p><strong>After confirming the transaction you will have to login to KlikBCA and make a payment</strong>:</p>
+                                                        <ul>
+                                                            <li>Select "e-Commerce payment"</li>
+                                                            <li>Select "Tour/Travel/Hotel"</li>
+                                                            <li>Select "NUSATRIP.COM"</li>
+                                                            <li>Your booking details will be displayed for you to confirm the payment</li>
+                                                            <li>Your booking will be instantly processed</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Mandiri Clickpay -->
+                                                <div class="online-bank-item mandiri-clickpay">
+                                                    <label for="mandiriKlikpay" class="form-control-label">
+                                                        <span class="text-label">Mandiri ClickPay</span>
+                                                        <img src="https://ssl.nusatrip.com/static/img/front/V2/payment/clickpay.png" width="47">
+                                                        <span class="material-symbols-outlined">chevron_right</span>
+                                                    </label>
+
+                                                    <input class="form-check-input" type="checkbox" id="mandiriKlikpay" value="mandiriKlikpay">
+
+                                                    <div class="online-bank-content">
+                                                        <div class="flex-row content-nav">
+                                                            <label for="mandiriKlikpay" class="form-check-label">
+                                                                <span class="material-symbols-outlined">chevron_left</span>
+                                                                <span>Change</span>
+                                                            </label>
+                                                            <img src="https://ssl.nusatrip.com/static/img/front/V2/payment/clickpay.png" width="47">
+                                                        </div>
+
+                                                        <div class="flex-row form-row">
+                                                            <label for="mandiri_CardType">Card type</label>
+                                                            <input type="text" value="Mandiri Debit Card" class="form-control" id="mandiri_CardType" readonly>
+
+                                                            <label for="mandiri_CardNumber">Card number</label>
+                                                            <input type="text" class="form-control" id="mandiri_CardNumber">
+
+                                                            <label for="mandiri_Appli">APPLI</label>
+                                                            <input type="text" value="3" class="form-control" id="mandiri_Appli" readonly>
+
+                                                            <label for="mandiri_LastDigit">Last 10 digits of card number (input 1)</label>
+                                                            <input type="text" class="form-control" id="mandiri_LastDigit">
+
+                                                            <label for="mandiri_Input2">Total amount (input 2)</label>
+                                                            <input type="text" value="IDR 1,601,031" class="form-control" id="mandiri_Input2" readonly>
+
+                                                            <label for="mandiri_Input3">Booking code (input 3)</label>
+                                                            <input type="text" value="0855560644" class="form-control" id="mandiri_Input3" readonly>
+
+                                                            <label for="mandiri_TokenResponse">Token response</label>
+                                                            <input type="text" class="form-control" id="mandiri_TokenResponse">
+                                                        </div>
+
+                                                        <p style="margin-top: 1rem;"><strong>How to use Mandiri Clickpay service</strong></p>
+
+                                                        <ul>
+                                                            <li>You must have mandiri internet User ID and Mandiri PIN Token.</li>
+                                                            <li>You must activate mandiri internet "Authorized Payment" service at www.bankmandiri.co.id.</li>
+                                                            <li>More information about activating mandiri internet "Authorized Payment" service can be accessed at www.bankmandiri.co.id and Mandiri Call 14000.</li>
+                                                            <li>The keyed in Debit Card Number is an active Mandiri Debit Card Number, without dot(.), dash(-), or space( ).</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Payment Footer -->
+                                        <div class="payment-content-footer">
+                                            <span class="material-symbols-outlined info-icon">info</span>
+                                            Most online banking payment solution require prior activation with the bank.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Security Notice -->
+                        <div class="security-notice">
+                            <img src="./assets/images/secure-logo.svg" width="105">
+                            <p class="text-muted">Highly secure server, A+ rated, Nusatrip.com will not store any financial data for extra security.</p>
+                        </div>
+                    </div>
+
+                    <!-- SIDEBAR -->
+                    <div class="sidebar">
+                        <!-- Title -->
+                        <div class="title-container">
+                            <h3 class="title">Flight Details</h3>
+                        </div>
+
+                        <div class="sidebar-content">
+                            <!-- Outbound -->
+                            <div class="itinerary outbound">
+                                <div class="flex-row routes">
+                                    <div class="flex-row direction">
+                                        <span class="city from">Manila </span>
+                                        <span class="material-symbols-outlined">arrow_right_alt</span>
+                                        <span class="city to">Jakarta</span>
+                                    </div>
+
+                                    <a href="#" class="view-details">
+                                        View Details
+                                    </a>
+                                </div>
+
+                                <div class="flex-row schedule">
+                                    <img src="https://sta.nusatrip.net/static/img/front/V2/icon-flight/GA.png"
+                                        alt="Garuda Indonesia" width="70" height="70" />
+                                    <div class="airport-time">
+                                        <p class="airports">
+                                            <span class="airport-code airport-destination">CGK</span> - <span
+                                                class="airport-code airport-arrival">MNL</span>
+                                        </p>
+
+                                        <p class="datetime">
+                                            <span class="date">Wed, 28 Jun 23</span> • <span class="time">18:45</span> •
+                                            <span class="passenger">1 passenger</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Inbound / Roundtrip-->
+                            <div class="itinerary inbound">
+                                <div class="flex-row routes">
+                                    <div class="flex-row direction">
+                                        <span class="city from">Jakarta</span>
+                                        <span class="material-symbols-outlined">arrow_right_alt</span>
+                                        <span class="city to">Manila</span>
+                                    </div>
+
+                                    <a href="#" class="view-details">
+                                        View Details
+                                    </a>
+                                </div>
+
+                                <div class="flex-row schedule">
+                                    <img src="https://sta.nusatrip.net/static/img/front/V2/icon-flight/TR.png"
+                                        alt="Scoot" width="70" height="70" />
+                                    <div class="airport-time">
+                                        <p class="airports">
+                                            <span class="airport-code airport-destination">MNL</span> - <span
+                                                class="airport-code airport-arrival">CGK</span>
+                                        </p>
+
+                                        <p class="datetime">
+                                            <span class="date">Fri, 30 Jun 23</span> • <span class="time">18:45</span> •
+                                            <span class="passenger">1 passenger</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Price -->
+                            <div class="price-container">
+                                <table class="price-table">
+                                    <tbody>
+                                        <tr>
+                                            <td class="desc">Departing Price</td>
+                                            <td class="value">IDR 2,269,106</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="desc">Returning Price</td>
+                                            <td class="value">IDR 3,352,290</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="desc">
+                                                <div>Travel Insurance</div>
+                                                <a href="#" class="action-link">View Benefits</a>
+                                            </td>
+                                            <td class="value">
+                                                <div>IDR 75,764</div>
+                                                <a href="#" class="action-link">Remove</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+
+                                    <tfoot>
+                                        <tr>
+                                            <td>Total</td>
+                                            <td class="total">IDR 5,697,160</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+
+                            <!-- Promo Code -->
+                            <div class="promo-code">
+                                <div class="nested-input">
+                                    <input id="promoCode" class="form-control" type="text" value="" placeholder="Code" />
+                                    <button class="outlined-button">Apply Promo Code</button>
+                                </div>
+                            </div>
+
+                            <!-- Refund Voucher -->
+                            <div class="refund-voucher">
+                                <div class="flex-row">
+                                    <label class="form-control-label" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#refundVoucher_Collapse" aria-controls="refundVoucher_Collapse">
+                                        <input id="refundVoucher" class="form-check-input" type="checkbox" data-indeterminate="false">
+                                        <span class="text-label">Use Refund Voucher</span>
+                                    </label>
+
+                                    <span class="value">IDR  2,000,000</span>
+                                </div>
+
+                                <div id="refundVoucher_Collapse" class="collapse">
+                                    <div class="input-row">
+                                        <div class="nested-input">
+                                            <input id="otpCode" class="form-control" type="text" value="" placeholder="Otp Code" />
+                                            <button class="outlined-button">Request Code</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- User Agreement -->
+                            <div class="user-agreement flex-row">
+                                <label class="form-control-label">
+                                    <input id="userAgreement" class="form-check-input" type="checkbox" data-indeterminate="false">
+                                </label>
+
+                                <div class="text-label">I have read and agree to the <a href="#">Cancelation Policy</a>, <a href="#">Insurance Policy</a> and <a href="#">User Agreement</a></div>
+                            </div>
+
+                            <!-- Submit Row -->
+                            <div class="submit-row">
+                                <!-- remove disabled to activate -->
+                                <button type="button" class="button" disabled>Book</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <div class="app-container">
+                <div class="footer-bottom flex-row">
+                    <div class="icon-stack">
+                        <div class="col">
+                            <img src="https://sta.nusatrip.net/static/img/front/bank-logo/mastercard.svg" width="26">
+                        </div>
+
+                        <div class="col">
+                            <img src="https://sta.nusatrip.net/static/img/front/bank-logo/visa.svg" width="36">
+                        </div>
+
+                        <div class="col">
+                            <img src="https://sta.nusatrip.net/static/img/front/bank-logo/jcb.svg" width="26">
+                        </div>
+
+                        <div class="col">
+                            <img src="https://sta.nusatrip.net/static/img/front/bank-logo/amex.svg" width="42">
+                        </div>
+                    </div>
+
+                    <div class="copyright">
+                        <p>© 2023 PT Tunas Sukses Mandiri. All rights reserved</p>
+                        <a href="#">privacy policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
