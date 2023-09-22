@@ -638,66 +638,67 @@
     margin-left: 0.5rem;
 }
 
-.online-bank-list {
+.online-bank-tabs {
+    display: flex;
     flex-direction: column;
-    min-height: 0;
-    position: relative;
-    transition: min-height 250ms cubic-bezier(0.19, 1, 0.22, 1) 0ms;
+    width: 100%;
 }
 
-.online-bank-list:has(.form-check-input:checked) {
-    min-height: 280px;
+.online-bank-tabs .tab-flex {
+    display: flex;
+    align-items: flex-start;
+    transform: translateX(0);
+    transition: transform 470ms ease-out;
+    width: 200%;
 }
 
-.online-bank-list:has(.mandiri-clickpay > .form-check-input:checked) {
-    min-height: 590px;
+.online-bank-tabs .tab-flex > * {
+    flex: 1 0 0%;
+    max-width: 50%;
+    width: 50%;
 }
 
-.online-bank-item > .form-control-label {
+.online-bank-tabs:has(.form-check-input:checked) .tab-flex {
+    transform: translateX(-50%);
+}
+
+.online-bank-tabs nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.online-bank-tabs nav .form-control-label {
     font-size: 1rem;
+    flex: 0 0 auto;
     min-height: 58px;
     transform: translateX(0);
     visibility: visible;
     transition: transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0ms;
-    width: 100%;
 }
 
-.online-bank-item:not(:first-child) .form-control-label {
+.online-bank-tabs nav .form-control-label:not(:first-child) {
     border-top: 1px solid var(--greyscale-divider);
 }
 
-.online-bank-item:nth-child(2) .form-control-label {
-    transition-delay: 25ms;
+.online-bank-tabs nav .form-control-label:nth-child(2) {
+    transition-delay: 100ms;
 }
 
-.online-bank-item:nth-child(3) .form-control-label {
-    transition-delay: 50ms;
+.online-bank-tabs nav .form-control-label:nth-child(3) {
+    transition-delay: 200ms;
 }
 
-.online-bank-list:has(.form-check-input:checked) .online-bank-item .form-control-label {
-    transform: translateX(-50%);
-    visibility: hidden;
+.online-bank-tabs:has(.form-check-input:checked) nav .form-control-label {
+    transform: translateX(-33.333%);
 }
 
-.online-bank-item .form-control-label img {
+.online-bank-tabs nav .form-control-label img {
     margin-left: auto;
 }
 
-.online-bank-item .form-check-input {
+.online-bank-content .form-check-input {
     display: none;
     visibility: hidden;
-}
-
-.online-bank-content {
-    background-color: #fff;
-    position: absolute;
-    left: 0;
-    top: 0;
-    max-height: 0;
-    visibility: hidden;
-    transform: translateX(20%);
-    transition: transform 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95), max-height 300ms cubic-bezier(0.39, 0.575, 0.565, 1);
-    width: 100%;
 }
 
 .online-bank-content .form-check-label {
@@ -752,11 +753,11 @@
     padding-right: 0;
 }
 
-.online-bank-item .form-check-input:checked ~ .online-bank-content {
+/* .online-bank-item .form-check-input:checked ~ .online-bank-content {
     visibility: visible;
     transform: translateX(0);
     max-height: 100vh;
-}
+} */
 
 .content-nav {
     align-items: center;
