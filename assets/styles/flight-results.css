@@ -228,21 +228,6 @@
     padding: 2px var(--padding-2xl);
 }
 
-.collapse {
-    overflow: hidden;
-    max-height: 0;
-    opacity: 0;
-    transition: all 0.25s ease-in-out;
-    transform: translateY(-25%);
-}
-
-.expanded .collapse {
-    max-height: 800px;
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
-}
-
 .card-body {
     align-self: stretch;
     display: flex;

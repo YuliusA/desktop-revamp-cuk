@@ -69,9 +69,9 @@
                             <!-- Direct Expanded -->
                             <li class="flight-list-item">
                                 <!-- Card -->
-                                <div class="flight-card expanded">
+                                <div class="flight-card">
                                     <!-- Card Button / Expand Trigger -->
-                                    <div class="card-button flex-row">
+                                    <div class="card-button flex-row" data-bs-toggle="collapse" data-bs-target="#flight1_Collapse" aria-expanded="true" aria-controls="flight1_Collapse">
                                         <!-- Summary Column  -->
                                         <div class="left-col flex-row">
                                             <!-- Airline -->
@@ -124,7 +124,7 @@
                                     </div>
 
                                     <!-- Card Collapse -->
-                                    <div class="collapse">
+                                    <div id="flight1_Collapse" class="collapse show">
                                         <!-- Card Body -->
                                         <div class="card-body">
                                             <div class="flex-row flight-segment">
@@ -185,7 +185,7 @@
                                 <!-- Card -->
                                 <div class="flight-card expanded">
                                     <!-- Card Button / Expand Trigger -->
-                                    <div class="card-button flex-row">
+                                    <div class="card-button flex-row" data-bs-toggle="collapse" data-bs-target="#flight2_Collapse" aria-expanded="false" aria-controls="flight2_Collapse">
                                         <!-- Summary Column  -->
                                         <div class="left-col flex-row">
                                             <!-- Airline -->
@@ -238,7 +238,7 @@
                                     </div>
 
                                     <!-- Card Collapse -->
-                                    <div class="collapse">
+                                    <div id="flight2_Collapse" class="collapse">
                                         <!-- Card Body -->
                                         <div class="card-body">
                                             <div class="flex-row flight-segment">
@@ -343,7 +343,7 @@
                                 <!-- Card -->
                                 <div class="flight-card">
                                     <!-- Card Button / Expand Trigger -->
-                                    <div class="card-button flex-row">
+                                    <div class="card-button flex-row" data-bs-toggle="collapse" data-bs-target="#flight3_Collapse" aria-expanded="false" aria-controls="flight3_Collapse">
                                         <!-- Summary Column  -->
                                         <div class="left-col flex-row">
                                             <!-- Airline -->
@@ -396,7 +396,7 @@
                                     </div>
 
                                     <!-- Card Collapse -->
-                                    <div class="collapse">
+                                    <div id="flight3_Collapse" class="collapse">
                                         <!-- Card Body -->
                                         <div class="card-body">
                                             <div class="flex-row flight-segment">
@@ -681,6 +681,8 @@
             <h4>I am Footer. Delete juga donk!!!</h4>
         </footer>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
