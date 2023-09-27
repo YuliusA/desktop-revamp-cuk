@@ -237,17 +237,12 @@
     transform: rotate(180deg);
 }
 
-.card {
-    border: 1px solid var(--color-lightgray-100);
-    border-radius: 4px;
-    font-size: 0.875rem;
-    margin: 1.5rem 0;
-    padding: 1rem;
-}
-
 /* ==================================== */
 /*            BAGGAGE ADDONS            */
 /* ==================================== */
+.baggage-addons {
+    margin: 1.5rem 0;
+}
 .baggage-addons .summary {
     border-bottom: 1px solid var(--greyscale-divider);
     padding-bottom: 1rem;
@@ -878,13 +873,20 @@
 
 .view-details {
     color: var(--color-steelblue-200);
+    cursor: pointer;
     font-size: 0.875rem;
+    font-weight: 500;
 }
 
 .schedule {
     border-bottom: 1px solid var(--greyscale-divider);
+    display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+.airport-time {
+    overflow: hidden;
 }
 
 .airports, .datetime {
@@ -898,7 +900,55 @@
 }
 
 .datetime {
-    color: rgba(85, 85, 85, 0.8);;
+    color: rgba(85, 85, 85, 0.8);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.flight-modal {
+    font-size: 0.875rem;
+}
+
+.flight-modal .modal-header {
+    align-items: flex-start;
+}
+
+.flight-modal .btn-close {
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.flight-modal .flight-summary {
+    margin-top: -0.5rem;
+}
+
+.flight-modal .modal-body {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.5rem;
+}
+
+.flight-modal .modal-footer {
+    justify-content: flex-start;
+    padding: 0 1rem;
+}
+
+.flight-modal .footer-icons {
+    align-items: center;
+    color: #a1a1a1;
+    font-size: 1.25rem;
+    padding: 1rem;
+    gap: 0.5rem;
+}
+
+.flight-modal .footer-description {
+    color: inherit;
+    line-height: 1;
+    margin: 0;
 }
 
 .price-container {
@@ -934,14 +984,19 @@
     text-align: right;
 }
 
-.price-table tbody tr:last-child td {
+.price-table tbody tr:last-child td,
+.price-table tbody .row-divider td {
     padding-bottom: 0.75rem;
 }
 
-.price-table tfoot td {
+.price-table tfoot td,
+.price-table .row-divider td {
     border-top: 1px solid var(--greyscale-divider);
-    font-weight: 500;
     padding-top: 0.75rem;
+}
+
+.price-table tfoot td {
+    font-weight: 500;
 }
 
 .price-table .total {
@@ -959,6 +1014,13 @@
 
 .promo-code .form-control {
     padding-right: 160px;
+}
+
+.promo-list {
+    color: var(--text-placeholder);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
 }
 
 .refund-voucher {
@@ -982,6 +1044,7 @@
 }
 
 .refund-voucher .input-row {
+    font-size: 0.875rem;
     padding-bottom: 0.5rem;
     padding-top: 0.5rem;
     width: 100%;

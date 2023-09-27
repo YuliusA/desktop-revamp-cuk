@@ -114,22 +114,24 @@
                         </div>
 
                         <!-- Baggage Addons -->
-                        <div class="card baggage-addons">
-                            <div class="summary">
-                                <p>Travel Add-ons</p>
-                            </div>
-
-                            <div class="flex-row">
-                                <div class="description">
-                                    <span class="icon-suitcase-purchase"></span>
-                                    <div class="text">
-                                        <p class="subtitle">Baggage</p>
-                                        <span class="caption">More room for your personal items</span>
-                                    </div>
+                        <div class="baggage-addons">
+                            <div class="card">
+                                <div class="summary">
+                                    <p>Travel Add-ons</p>
                                 </div>
 
-                                <div class="action">
-                                    <button>Add/Modify</button>
+                                <div class="flex-row">
+                                    <div class="description">
+                                        <span class="icon-suitcase-purchase"></span>
+                                        <div class="text">
+                                            <p class="subtitle">Baggage</p>
+                                            <span class="caption">More room for your personal items</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="action">
+                                        <button>Add/Modify</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -850,12 +852,157 @@
                                         <span class="city to">Jakarta</span>
                                     </div>
 
-                                    <a href="#" class="view-details">
+                                    <span class="view-details" data-bs-toggle="modal" data-bs-target="#outboundFlight">
                                         View Details
-                                    </a>
+                                    </span>
+
+                                    <!-- Flight Modal / Outbound -->
+                                    <div class="flight-modal modal fade" id="outboundFlight" tabindex="-1" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+                                            <div class="modal-content">
+                                                <!-- Modal Header -->
+                                                <div class="modal-header">
+                                                    <div class="flight-summary">
+                                                        <!-- Airline -->
+                                                        <div class="airline">
+                                                            <img
+                                                                src="https://sta.nusatrip.net/static/img/front/V2/icon-flight/GA.png"
+                                                                alt="Scoot"
+                                                                width="80"
+                                                                height="80"
+                                                            />
+                                                            <p class="airline-name">Garuda Indonesia</p>
+                                                        </div>
+            
+                                                        <!-- Timeline -->
+                                                        <div class="timeline flex-row">
+                                                            <div class="col departure">
+                                                                <p class="time">20:25</p>
+                                                                <span class="airport">MNL</span>
+                                                            </div>
+            
+                                                            <div class="col line-container">
+                                                                <div class="line"></div>
+                                                                <span class="stop-duration">1 stop, 24h 5m</span>
+                                                            </div>
+            
+                                                            <div class="col arrival">
+                                                                <p class="time">23:30 <sup class="alert">+1</sup></p>
+                                                                <span class="airport">CGK</span>
+                                                            </div>
+                                                        </div>
+            
+                                                        <!-- Icons -->
+                                                        <div class="flex-row icon-row">
+                                                            <i class="icon-suitcase-error"></i>
+                                                            <i class="icon-restaurant"></i>
+                                                        </div>
+                                                    </div>
+
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+
+                                                <!-- Modal Body -->
+                                                <div class="modal-body">
+                                                    <div class="flex-row flight-segment">
+                                                        <!-- Routes -->
+                                                        <div class="route flex-row">
+                                                            <!-- Icon Connector -->
+                                                            <div class="icon-connector">
+                                                                <div class="circle">
+                                                                    <i class="icon-flight-takeoff"></i>
+                                                                </div>
+        
+                                                                <div class="vertical-divider"></div>
+        
+                                                                <div class="circle">
+                                                                    <i class="icon-flight-landing"></i>
+                                                                </div>
+                                                            </div>
+        
+                                                            <!-- Route Detail -->
+                                                            <div class="route-detail">
+                                                                <div class="route-detail-text">
+                                                                    <p class="airport-name">Ninoy Aquino International (MNL)</p>
+                                                                    <span class="date-time">Monday, 14 August 2023 · 20:25</span>
+                                                                </div>
+        
+                                                                <div class="route-detail-text">
+                                                                    <p class="airport-name">Soekarno Hatta (CGK)</p>
+                                                                    <span class="date-time">Monday, 14 August 2023 · 23:30</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+        
+                                                        <!-- Vertical Divider -->
+                                                        <div class="vertical-divider softer"></div>
+        
+                                                        <!-- Flight Description -->
+                                                        <div class="flight-description">
+                                                            <p class="duration">Trip time: 4 hours 5 minutes</p>
+                                                            <p class="carrier">Garuda Indonesia · Economy Class · 5J759</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="transit">
+                                                        <p class="transit-text">Transit time: 15 hours 45 minutes</p>
+                                                    </div>
+
+                                                    <div class="flex-row flight-segment">
+                                                        <!-- Routes -->
+                                                        <div class="route flex-row">
+                                                            <!-- Icon Connector -->
+                                                            <div class="icon-connector">
+                                                                <div class="circle">
+                                                                    <i class="icon-flight-takeoff"></i>
+                                                                </div>
+        
+                                                                <div class="vertical-divider"></div>
+        
+                                                                <div class="circle">
+                                                                    <i class="icon-flight-landing"></i>
+                                                                </div>
+                                                            </div>
+        
+                                                            <!-- Route Detail -->
+                                                            <div class="route-detail">
+                                                                <div class="route-detail-text">
+                                                                    <p class="airport-name">Ninoy Aquino International (MNL)</p>
+                                                                    <span class="date-time">Monday, 14 August 2023 · 20:25</span>
+                                                                </div>
+        
+                                                                <div class="route-detail-text">
+                                                                    <p class="airport-name">Soekarno Hatta (CGK)</p>
+                                                                    <span class="date-time">Monday, 14 August 2023 · 23:30</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+        
+                                                        <!-- Vertical Divider -->
+                                                        <div class="vertical-divider softer"></div>
+        
+                                                        <!-- Flight Description -->
+                                                        <div class="flight-description">
+                                                            <p class="duration">Trip time: 4 hours 5 minutes</p>
+                                                            <p class="carrier">Garuda Indonesia · Economy Class · 5J759</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Modal Footer -->
+                                                <div class="modal-footer">
+                                                    <div class="flex-row footer-icons">
+                                                        <i class="icon-suitcase-error"></i>
+                                                        <i class="icon-suitcase-purchase"></i>
+                                                    </div>
+                                                    <p class="footer-description">No Baggage Included - Purchase available</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div class="flex-row schedule">
+                                <div class="schedule">
                                     <img src="https://sta.nusatrip.net/static/img/front/V2/icon-flight/GA.png"
                                         alt="Garuda Indonesia" width="70" height="70" />
                                     <div class="airport-time">
@@ -881,12 +1028,157 @@
                                         <span class="city to">Manila</span>
                                     </div>
 
-                                    <a href="#" class="view-details">
+                                    <span class="view-details" data-bs-toggle="modal" data-bs-target="#inboundFlight">
                                         View Details
-                                    </a>
+                                    </span>
+
+                                    <!-- Flight Modal / Inbound -->
+                                    <div class="flight-modal modal fade" id="inboundFlight" tabindex="-1" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+                                            <div class="modal-content">
+                                                <!-- Modal Header -->
+                                                <div class="modal-header">
+                                                    <div class="flight-summary">
+                                                        <!-- Airline -->
+                                                        <div class="airline">
+                                                            <img
+                                                                src="https://sta.nusatrip.net/static/img/front/V2/icon-flight/TR.png"
+                                                                alt="Scoot"
+                                                                width="80"
+                                                                height="80"
+                                                            />
+                                                            <p class="airline-name">Scoot</p>
+                                                        </div>
+            
+                                                        <!-- Timeline -->
+                                                        <div class="timeline flex-row">
+                                                            <div class="col departure">
+                                                                <p class="time">20:25</p>
+                                                                <span class="airport">MNL</span>
+                                                            </div>
+            
+                                                            <div class="col line-container">
+                                                                <div class="line"></div>
+                                                                <span class="stop-duration">1 stop, 24h 5m</span>
+                                                            </div>
+            
+                                                            <div class="col arrival">
+                                                                <p class="time">23:30 <sup class="alert">+1</sup></p>
+                                                                <span class="airport">CGK</span>
+                                                            </div>
+                                                        </div>
+            
+                                                        <!-- Icons -->
+                                                        <div class="flex-row icon-row">
+                                                            <i class="icon-suitcase-error"></i>
+                                                            <i class="icon-restaurant"></i>
+                                                        </div>
+                                                    </div>
+
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+
+                                                <!-- Modal Body -->
+                                                <div class="modal-body">
+                                                    <div class="flex-row flight-segment">
+                                                        <!-- Routes -->
+                                                        <div class="route flex-row">
+                                                            <!-- Icon Connector -->
+                                                            <div class="icon-connector">
+                                                                <div class="circle">
+                                                                    <i class="icon-flight-takeoff"></i>
+                                                                </div>
+        
+                                                                <div class="vertical-divider"></div>
+        
+                                                                <div class="circle">
+                                                                    <i class="icon-flight-landing"></i>
+                                                                </div>
+                                                            </div>
+        
+                                                            <!-- Route Detail -->
+                                                            <div class="route-detail">
+                                                                <div class="route-detail-text">
+                                                                    <p class="airport-name">Ninoy Aquino International (MNL)</p>
+                                                                    <span class="date-time">Monday, 14 August 2023 · 20:25</span>
+                                                                </div>
+        
+                                                                <div class="route-detail-text">
+                                                                    <p class="airport-name">Soekarno Hatta (CGK)</p>
+                                                                    <span class="date-time">Monday, 14 August 2023 · 23:30</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+        
+                                                        <!-- Vertical Divider -->
+                                                        <div class="vertical-divider softer"></div>
+        
+                                                        <!-- Flight Description -->
+                                                        <div class="flight-description">
+                                                            <p class="duration">Trip time: 4 hours 5 minutes</p>
+                                                            <p class="carrier">Garuda Indonesia · Economy Class · 5J759</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="transit">
+                                                        <p class="transit-text">Transit time: 15 hours 45 minutes</p>
+                                                    </div>
+
+                                                    <div class="flex-row flight-segment">
+                                                        <!-- Routes -->
+                                                        <div class="route flex-row">
+                                                            <!-- Icon Connector -->
+                                                            <div class="icon-connector">
+                                                                <div class="circle">
+                                                                    <i class="icon-flight-takeoff"></i>
+                                                                </div>
+        
+                                                                <div class="vertical-divider"></div>
+        
+                                                                <div class="circle">
+                                                                    <i class="icon-flight-landing"></i>
+                                                                </div>
+                                                            </div>
+        
+                                                            <!-- Route Detail -->
+                                                            <div class="route-detail">
+                                                                <div class="route-detail-text">
+                                                                    <p class="airport-name">Ninoy Aquino International (MNL)</p>
+                                                                    <span class="date-time">Monday, 14 August 2023 · 20:25</span>
+                                                                </div>
+        
+                                                                <div class="route-detail-text">
+                                                                    <p class="airport-name">Soekarno Hatta (CGK)</p>
+                                                                    <span class="date-time">Monday, 14 August 2023 · 23:30</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+        
+                                                        <!-- Vertical Divider -->
+                                                        <div class="vertical-divider softer"></div>
+        
+                                                        <!-- Flight Description -->
+                                                        <div class="flight-description">
+                                                            <p class="duration">Trip time: 4 hours 5 minutes</p>
+                                                            <p class="carrier">Garuda Indonesia · Economy Class · 5J759</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Modal Footer -->
+                                                <div class="modal-footer">
+                                                    <div class="flex-row footer-icons">
+                                                        <i class="icon-suitcase-error"></i>
+                                                        <i class="icon-suitcase-purchase"></i>
+                                                    </div>
+                                                    <p class="footer-description">No Baggage Included - Purchase available</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div class="flex-row schedule">
+                                <div class="schedule">
                                     <img src="https://sta.nusatrip.net/static/img/front/V2/icon-flight/TR.png"
                                         alt="Scoot" width="70" height="70" />
                                     <div class="airport-time">
@@ -925,6 +1217,18 @@
                                                 <a href="#" class="action-link">Remove</a>
                                             </td>
                                         </tr>
+
+                                        <!-- Used Promo Code -->
+                                        <tr class="row-divider used-promo-code">
+                                            <td class="desc">Promo Code</td>
+                                            <td class="value">IDR 2,000,000</td>
+                                        </tr>
+
+                                        <!-- Used Refund Voucher -->
+                                        <tr class="row-divider used-refund-voucher">
+                                            <td class="desc">Refund Voucher</td>
+                                            <td class="value">IDR 2,000,000</td>
+                                        </tr>
                                     </tbody>
 
                                     <tfoot>
@@ -940,7 +1244,88 @@
                             <div class="promo-code">
                                 <div class="nested-input">
                                     <input id="promoCode" class="form-control" type="text" value="" placeholder="Code" />
-                                    <button class="outlined-button">Apply Promo Code</button>
+
+                                    <div class="action flex-row">
+                                        <!-- <button class="outlined-button">Apply Promo Code</button> -->
+                                        <button type="button" class="outlined-button" data-bs-toggle="modal" data-bs-target="#promoModal">Apply Promo Code</button>
+                                    </div>
+  
+                                    <!-- Promo Modal -->
+                                    <div class="modal fade" id="promoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="promoModalLabel">Promo Code</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+
+                                                <div class="modal-body">
+                                                    <!-- Promo List -->
+                                                    <div class="promo-list">
+                                                        <!-- Promo 1 -->
+                                                        <label class="radio-card">
+                                                            <span class="body">
+                                                                <input class="form-check-input" type="radio" name="promoItem" id="promo1" value="NGINAPJKT">
+
+                                                                <span class="text-column">
+                                                                    <span class="title">NGINAPJKT</span>
+
+                                                                    <span class="subtitle">Hotel 5% Discount (max Rp 150,000) with min purchase of Rp 300,000</span>
+                                                                </span>
+                                                            </span>
+                                                            <span class="footer">
+                                                                Booking Period: 26 June - 16 July 2023 00:00:00 - 23:59:00 GMT+7
+                                                            </span>
+                                                        </label>
+
+                                                        <!-- Promo 2 -->
+                                                        <label class="radio-card">
+                                                            <span class="body">
+                                                                <input class="form-check-input" type="radio" name="promoItem" id="promo2" value="NTDBSANNIV1">
+
+                                                                <span class="text-column">
+                                                                    <span class="title">NTDBSANNIV1</span>
+
+                                                                    <span class="subtitle">Flight & Hotel Discount Rp 134,000 with min purchase of Rp 2,000,000</span>
+
+                                                                    <span>Kartu Kredit (DIGIBANK Visa Travel Signature, DIGIBANK Visa
+                                                                        Travel Platinum, DIGIBANK LiveFresh Visa, DIGIBANK
+                                                                        LiveFresh Mastercard, DIGIBANK Black Visa Platinum, DIGIBANK Black MasterCard World, DIGIBANK Visa Infinite, DIGIBANK MasterCard Black)</span>
+                                                                </span>
+                                                            </span>
+                                                            <span class="footer">
+                                                                Booking Period: 26 June - 16 July 2023 00:00:00 - 23:59:00 GMT+7
+                                                            </span>
+                                                        </label>
+
+                                                        <!-- Promo 3 -->
+                                                        <label class="radio-card">
+                                                            <span class="body">
+                                                                <input class="form-check-input" type="radio" name="promoItem" id="promo3" value="YGSDLSDI5">
+
+                                                                <span class="text-column">
+                                                                    <span class="title">YGSDLSDI5</span>
+
+                                                                    <span class="subtitle">Flight & Hotel Discount Rp 134,000 with min purchase of Rp 2,000,000</span>
+
+                                                                    <span>Kartu Kredit (DIGIBANK Visa Travel Signature, DIGIBANK Visa
+                                                                        Travel Platinum, DIGIBANK LiveFresh Visa, DIGIBANK
+                                                                        LiveFresh Mastercard, DIGIBANK Black Visa Platinum, DIGIBANK Black MasterCard World, DIGIBANK Visa Infinite, DIGIBANK MasterCard Black)</span>
+                                                                </span>
+                                                            </span>
+                                                            <span class="footer">
+                                                                Booking Period: 26 June - 16 July 2023 00:00:00 - 23:59:00 GMT+7
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Use Code</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -959,7 +1344,12 @@
                                     <div class="input-row">
                                         <div class="nested-input">
                                             <input id="otpCode" class="form-control" type="text" value="" placeholder="Otp Code" />
-                                            <button class="outlined-button">Request Code</button>
+
+                                            <div class="action flex-row">
+                                                <span class="countdown hidden">46s</span>
+                                                <!-- when active change class outlined-button to btn-primary-->
+                                                <button class="outlined-button">Request Code</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
