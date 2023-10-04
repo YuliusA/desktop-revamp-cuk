@@ -152,6 +152,12 @@
 .icon-restaurant:before {
     content: "\e906";
 }
+.icon-suitcase:before {
+    content: "\e90a";
+}
+.icon-suitcase-add:before {
+    content: "\e90b";
+}
 .icon-suitcase-check:before {
     content: "\e907";
 }
@@ -725,7 +731,7 @@ body {
 }
 
 .modal-title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: normal;
     margin-bottom: 0;
     line-height: 1.5;

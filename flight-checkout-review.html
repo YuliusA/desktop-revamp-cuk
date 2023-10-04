@@ -122,7 +122,7 @@
 
                                 <div class="flex-row">
                                     <div class="description">
-                                        <span class="icon-suitcase-purchase"></span>
+                                        <span class="icon-suitcase-add"></span>
                                         <div class="text">
                                             <p class="subtitle">Baggage</p>
                                             <span class="caption">More room for your personal items</span>
@@ -130,7 +130,46 @@
                                     </div>
 
                                     <div class="action">
-                                        <button>Add/Modify</button>
+                                        <button data-bs-toggle="modal" data-bs-target="#baggageModal">Add/Modify</button>
+                                    </div>
+
+                                    <!-- Baggage Modal -->
+                                    <div class="baggage-modal modal fade" id="baggageModal" tabindex="-1" aria-hidden="true" aria-labelledby="baggageModalLabel">
+                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+                                            <div class="modal-content">
+                                                <!-- Modal Header -->
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="baggageModalLabel">Baggage</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+
+                                                <!-- Modal Body -->
+                                                <div class="modal-body">
+                                                    <div class="baggage-form">
+                                                        <nav>
+                                                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                                                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
+                                                                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
+                                                                <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
+                                                                <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false" disabled>Disabled</button>
+                                                            </div>
+                                                        </nav>
+
+                                                        <div class="tab-content" id="nav-tabContent">
+                                                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">...</div>
+                                                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">...</div>
+                                                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">...</div>
+                                                            <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">...</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Modal Footer -->
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Recalculate Price</button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1246,19 +1285,20 @@
                                     <input id="promoCode" class="form-control" type="text" value="" placeholder="Code" />
 
                                     <div class="action flex-row">
-                                        <!-- <button class="outlined-button">Apply Promo Code</button> -->
                                         <button type="button" class="outlined-button" data-bs-toggle="modal" data-bs-target="#promoModal">Apply Promo Code</button>
                                     </div>
   
                                     <!-- Promo Modal -->
-                                    <div class="modal fade" id="promoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal fade" id="promoModal" tabindex="-1" aria-labelledby="promoModalLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                                             <div class="modal-content">
+                                                <!-- Modal Header -->
                                                 <div class="modal-header">
                                                     <h1 class="modal-title fs-5" id="promoModalLabel">Promo Code</h1>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
 
+                                                <!-- Modal Body -->
                                                 <div class="modal-body">
                                                     <!-- Promo List -->
                                                     <div class="promo-list">
@@ -1320,6 +1360,7 @@
                                                     </div>
                                                 </div>
 
+                                                <!-- Modal Footer -->
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Use Code</button>
                                                 </div>
