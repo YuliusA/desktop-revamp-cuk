@@ -277,6 +277,141 @@
     font-weight: bold;
 }
 
+.baggage-modal .modal-header,
+.baggage-modal .modal-footer {
+    border: 0;
+}
+
+.baggage-form {
+    border: 1px solid var(--color-lavender-100);
+    border-radius: 4px; 
+    display: flex;
+}
+
+.baggage-form > .nav {
+    border-right: 1px solid var(--color-lavender-100);
+    flex: 1 0 0%;
+    padding: 1rem 0;
+}
+
+.baggage-form > .nav .nav-link {
+    border-width: 1px 0;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 0;
+    color: inherit;
+    margin-right: -1px;
+    padding: 0.75rem 1.5rem;
+}
+
+.baggage-form > .nav .nav-link.active {
+    background-color: var(--color-ghostwhite);
+    border-color: var(--color-lavender-100);
+}
+
+.baggage-form .nav-link .primary {
+    font-weight: 500;
+}
+
+.baggage-form > .nav .nav-link .secondary {
+    font-size: 0.75rem;
+}
+
+.baggage-form > .nav .nav-link > * {
+    display: block;
+    text-align: left;
+}
+.baggage-form .nav-pills {
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.baggage-form .nav-pills .nav-link {
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.675;
+    padding: 4px 12px;
+}
+
+.baggage-form > .tab-content {
+    background-color: var(--color-ghostwhite);
+    flex: 0 0 auto;
+    padding: 1rem;
+    width: 75%;
+}
+
+.baggage-form p .icon {
+    font-size: 1.25em;
+    margin: 0 3px;
+}
+
+.baggage-form .label-wrapper {
+    padding-bottom: 1rem;
+}
+
+.baggage-form .section-label {
+    display: flex;
+    align-items: center;
+    font-size: inherit;
+    font-weight: normal;
+    gap: 0.25rem;
+}
+
+.section-label [class^="material-symbols"] {
+    font-size: 1.375rem;
+    margin: 0.125rem;
+    opacity: 0.75;
+}
+
+.baggage-addons .baggage-form .radio-button-group {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: flex-start;
+}
+
+.baggage-form .radio-card {
+    min-width: 90px;
+    width: auto;
+}
+
+.baggage-form .radio-card:has(.form-check-input:checked) {
+    box-shadow: 0px 0px 0px 1px var(--color-steelblue-200) inset;
+    color: var(--color-steelblue-200);
+}
+
+.baggage-form .radio-card .body {
+    padding: 0.25rem 0.75rem;
+}
+
+.baggage-form .radio-card input {
+    display: none;
+    visibility: hidden;
+}
+
+.baggage-form .radio-card .text-column {
+    gap: 0;
+    text-align: center;
+}
+
+.baggage-form .radio-card .body .title {
+    font-size: 0.875rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.baggage-form .radio-card .body .subtitle {
+    color: inherit;
+    font-size: 0.75rem;
+}
+
+.baggage-form .input-section .helper-text {
+    color: var(--text-placeholder);
+    font-size: 0.75rem;
+    line-height: 2;
+    padding: 4px;
+}
+
+
 /* ==================================== */
 /*           Frequent Flyer             */
 /* ==================================== */
@@ -774,12 +909,6 @@
     padding-left: 0;
     padding-right: 0;
 }
-
-/* .online-bank-item .form-check-input:checked ~ .online-bank-content {
-    visibility: visible;
-    transform: translateX(0);
-    max-height: 100vh;
-} */
 
 .content-nav {
     align-items: center;

@@ -184,6 +184,7 @@ h1, h2, h3, h4, h5, h6, p {
     'opsz' 24;
     height: 1em;
     width: 1em;
+    overflow: hidden;
 }
 
 .hidden {
@@ -289,6 +290,44 @@ button:disabled {
     opacity: var(--btn-close-disabled-opacity);
 }
 
+.nav {
+    --nav-link-padding-x: 1rem;
+    --nav-link-padding-y: 0.5rem;
+    --nav-link-color: var(--color-steelblue-100);
+    --nav-link-hover-color: var(--color-steelblue-200);
+    --nav-link-disabled-color: var(--bs-secondary-color);
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.nav-vertical {
+    flex-direction: column;
+}
+
+.nav-link {
+    display: block;
+    padding: var(--nav-link-padding-y) var(--nav-link-padding-x);
+    color: var(--nav-link-color);
+    text-decoration: none;
+    background: 0 0;
+    border: 0;
+    transition: color .15s ease-in-out,
+                background-color .15s ease-in-out,
+                border-color .15s ease-in-out;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    background-color: var(--color-steelblue-200);
+    color: #fff;
+}
+
+.tab-content > .tab-pane:not(.active) {
+    display: none;
+}
+
 .nested-input {
     height: 40px;
     position: relative;
@@ -310,6 +349,10 @@ button:disabled {
 
 .nested-input .action > * {
     max-height: 100%;
+}
+
+.align-middle > * {
+    vertical-align: middle;
 }
 
 img {
@@ -352,6 +395,10 @@ body {
     max-width: 82.5rem;
     padding-left: 1rem;
     padding-right: 1rem;
+}
+
+.align-items-center {
+    align-items: center;
 }
 
 .card {

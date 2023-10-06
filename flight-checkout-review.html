@@ -135,31 +135,438 @@
 
                                     <!-- Baggage Modal -->
                                     <div class="baggage-modal modal fade" id="baggageModal" tabindex="-1" aria-hidden="true" aria-labelledby="baggageModalLabel">
-                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" style="--modal-width: 884px;">
                                             <div class="modal-content">
                                                 <!-- Modal Header -->
                                                 <div class="modal-header">
-                                                    <h1 class="modal-title fs-5" id="baggageModalLabel">Baggage</h1>
+                                                    <h1 class="modal-title fs-5" id="baggageModalLabel">
+                                                        <span class="icon-suitcase-add"></span>
+                                                        Baggage
+                                                    </h1>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
 
                                                 <!-- Modal Body -->
                                                 <div class="modal-body">
                                                     <div class="baggage-form">
-                                                        <nav>
-                                                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                                                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
-                                                                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
-                                                                <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
-                                                                <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false" disabled>Disabled</button>
-                                                            </div>
-                                                        </nav>
+                                                        <!-- Nav Tabs -->
+                                                        <div
+                                                            class="nav nav-tabs nav-vertical"
+                                                            id="baggage-tab"
+                                                            role="tablist"
+                                                            aria-orientation="vertical"
+                                                        >
+                                                            <button
+                                                                class="nav-link active"
+                                                                id="passenger1-nav"
+                                                                data-bs-toggle="tab"
+                                                                data-bs-target="#passenger1-tab"
+                                                                aria-controls="passenger1-tab"
+                                                                aria-selected="true"
+                                                                type="button"
+                                                                role="tab"
+                                                            >
+                                                                <span class="primary">Passenger 1</span>
+                                                                <span class="secondary">Adult</span>
+                                                            </button>
+                                                            
+                                                            <button
+                                                                class="nav-link"
+                                                                id="passenger2-nav"
+                                                                data-bs-toggle="tab"
+                                                                data-bs-target="#passenger2-tab"
+                                                                aria-controls="passenger2-tab"
+                                                                aria-selected="false"
+                                                                type="button"
+                                                                role="tab"
+                                                            >
+                                                                <span class="primary">Passenger 2</span>
+                                                                <span class="secondary">Adult</span>
+                                                            </button>
+                                                            
+                                                            <button
+                                                                class="nav-link"
+                                                                id="passenger3-nav"
+                                                                data-bs-toggle="tab"
+                                                                data-bs-target="#passenger3-tab"
+                                                                aria-controls="passenger3-tab"
+                                                                aria-selected="false"
+                                                                type="button"
+                                                                role="tab"
+                                                            >
+                                                                <span class="primary">Passenger 3</span>
+                                                                <span class="secondary">Child</span>
+                                                            </button>
+                                                        </div>
 
-                                                        <div class="tab-content" id="nav-tabContent">
-                                                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">...</div>
-                                                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">...</div>
-                                                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">...</div>
-                                                            <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">...</div>
+                                                        <!-- Tab Content -->
+                                                        <div class="tab-content" id="baggage-tabContent">
+                                                            <!-- Passenger 1 Baggage Selection -->
+                                                            <div
+                                                                class="tab-pane fade show active"
+                                                                id="passenger1-tab"
+                                                                aria-labelledby="passenger1-nav"
+                                                                role="tabpanel"
+                                                                tabindex="0"
+                                                            >
+                                                                <!-- Nav Tabs -->
+                                                                <nav class="nav nav-pills flex-column flex-sm-row">
+                                                                    <button
+                                                                        class="nav-link active"
+                                                                        id="psg1-departBag-nav"
+                                                                        data-bs-toggle="pill"
+                                                                        data-bs-target="#psg1-departbag"
+                                                                        type="button"
+                                                                        role="tab"
+                                                                        aria-controls="psg1-departbag"
+                                                                        aria-selected="true"
+                                                                    >
+                                                                        Departing
+                                                                    </button>
+
+                                                                    <button
+                                                                        class="nav-link"
+                                                                        id="psg1-returnBag-nav"
+                                                                        data-bs-toggle="pill"
+                                                                        data-bs-target="#psg1-returnbag"
+                                                                        type="button"
+                                                                        role="tab"
+                                                                        aria-controls="psg1-returnbag"
+                                                                        aria-selected="false"
+                                                                    >
+                                                                        Returning
+                                                                    </button>
+                                                                </nav>
+
+                                                                <!-- Tab Content -->
+                                                                <div class="tab-content">
+                                                                    <!-- Departing -->
+                                                                    <div
+                                                                        class="tab-pane fade show active"
+                                                                        id="psg1-departbag"
+                                                                        aria-labelledby="psg1-departBag-nav"
+                                                                        role="tabpanel"
+                                                                        tabindex="0"
+                                                                    >
+                                                                        <p class="align-middle">
+                                                                            <span class="airport-origin">Soekarno Hatta (CGK)</span>
+                                                                            <span class="material-symbols-outlined icon">arrow_right_alt</span>
+                                                                            <span class="airport-destination">Ngurah Rai (DPS)</span>
+                                                                        </p>
+
+                                                                        <p><small>Direct Flight</small></p>
+
+                                                                        <!-- Baggage Input Section -->
+                                                                        <section class="input-section">
+                                                                            <!-- Section Label -->
+                                                                            <div class="label-wrapper flex-row align-items-center">
+                                                                                <h4 class="section-label">
+                                                                                    <span class="icon-suitcase"></span>
+                                                                                    Baggage
+                                                                                </h4>
+
+                                                                                <small>Free Baggage <strong>20kg</strong></small>
+                                                                            </div>
+
+                                                                            <!-- Radio Button Group -->
+                                                                            <div class="radio-button-group">
+                                                                                <label class="radio-card">
+                                                                                    <span class="body">
+                                                                                        <input class="form-check-input" type="radio" name="psg1_departBag" id="psg1_departBag_20" value="20kg" checked>
+                        
+                                                                                        <span class="text-column">
+                                                                                            <span class="title">20kg</span>
+                                                                                            <span class="subtitle">IDR 0</span>
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </label>
+
+                                                                                <label class="radio-card">
+                                                                                    <span class="body">
+                                                                                        <input class="form-check-input" type="radio" name="psg1_departBag" id="psg1_departBag_30" value="30kg">
+                        
+                                                                                        <span class="text-column">
+                                                                                            <span class="title">30kg</span>
+                                                                                            <span class="subtitle">IDR 236,775</span>
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </label>
+
+                                                                                <label class="radio-card">
+                                                                                    <span class="body">
+                                                                                        <input class="form-check-input" type="radio" name="psg1_departBag" id="psg1_departBag_40" value="40kg">
+                        
+                                                                                        <span class="text-column">
+                                                                                            <span class="title">40kg</span>
+                                                                                            <span class="subtitle">IDR 402,825</span>
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </label>
+                                                                            </div>
+                                                                            
+                                                                            <!-- Helper Text -->
+                                                                            <div class="helper-text">Each piece of baggage should not weight more than 32kg</div>
+                                                                        </section>
+
+                                                                        <!-- Sport Equipment Input Section -->
+                                                                        <section class="input-section">
+                                                                            <!-- Section Label -->
+                                                                            <div class="label-wrapper flex-row align-items-center">
+                                                                                <h4 class="section-label">
+                                                                                    <span class="material-symbols-outlined">sports_golf</span>
+                                                                                    Sport Equipment
+                                                                                </h4>
+                                                                            </div>
+
+                                                                            <!-- Radio Button Group -->
+                                                                            <div class="radio-button-group">
+                                                                                <label class="radio-card">
+                                                                                    <span class="body">
+                                                                                        <input class="form-check-input" type="radio" name="psg1_depart_sportEquip" id="psg1_depart_sportEquip_0" value="0" checked>
+                        
+                                                                                        <span class="text-column">
+                                                                                            <span class="title">0kg</span>
+                                                                                            <span class="subtitle">IDR 0</span>
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </label>
+
+                                                                                <label class="radio-card">
+                                                                                    <span class="body">
+                                                                                        <input class="form-check-input" type="radio" name="psg1_depart_sportEquip" id="psg1_depart_sportEquip_15" value="15kg">
+                        
+                                                                                        <span class="text-column">
+                                                                                            <span class="title">15kg</span>
+                                                                                            <span class="subtitle">IDR 99,425</span>
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </label>
+
+                                                                                <label class="radio-card">
+                                                                                    <span class="body">
+                                                                                        <input class="form-check-input" type="radio" name="psg1_depart_sportEquip" id="psg1_depart_sportEquip_20" value="20kg">
+                        
+                                                                                        <span class="text-column">
+                                                                                            <span class="title">20kg</span>
+                                                                                            <span class="subtitle">IDR 134,275</span>
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </label>
+
+                                                                                <label class="radio-card">
+                                                                                    <span class="body">
+                                                                                        <input class="form-check-input" type="radio" name="psg1_depart_sportEquip" id="psg1_depart_sportEquip_25" value="25kg">
+                        
+                                                                                        <span class="text-column">
+                                                                                            <span class="title">25kg</span>
+                                                                                            <span class="subtitle">IDR 167,075</span>
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </label>
+
+                                                                                <label class="radio-card">
+                                                                                    <span class="body">
+                                                                                        <input class="form-check-input" type="radio" name="psg1_depart_sportEquip" id="psg1_depart_sportEquip_30" value="30kg">
+                        
+                                                                                        <span class="text-column">
+                                                                                            <span class="title">30kg</span>
+                                                                                            <span class="subtitle">IDR 283,926</span>
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </label>
+
+                                                                                <label class="radio-card">
+                                                                                    <span class="body">
+                                                                                        <input class="form-check-input" type="radio" name="psg1_depart_sportEquip" id="psg1_depart_sportEquip_40" value="40kg">
+                        
+                                                                                        <span class="text-column">
+                                                                                            <span class="title">40kg</span>
+                                                                                            <span class="subtitle">IDR 483,800</span>
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </label>
+                                                                            </div>
+
+                                                                            <!-- Helper Text -->
+                                                                            <div class="helper-text">This is inclusive of a 60,000.00 idr sports equipment</div>
+                                                                        </section>
+                                                                    </div>
+
+                                                                    <!-- Returning -->
+                                                                    <div
+                                                                        class="tab-pane fade"
+                                                                        id="psg1-returnbag"
+                                                                        aria-labelledby="psg1-returnBag-nav"
+                                                                        role="tabpanel"
+                                                                        tabindex="0"
+                                                                    >
+                                                                        <p class="align-middle">
+                                                                            <span class="airport-destination">Ngurah Rai (DPS)</span>
+                                                                            <span class="material-symbols-outlined icon">arrow_right_alt</span>
+                                                                            <span class="airport-origin">Soekarno Hatta (CGK)</span>
+                                                                        </p>
+
+                                                                        <p><small>Direct Flight</small></p>
+
+                                                                        <!-- Baggage Input Section -->
+                                                                        <section class="input-section">
+                                                                            <!-- Section Label -->
+                                                                            <div class="label-wrapper flex-row align-items-center">
+                                                                                <h4 class="section-label">
+                                                                                    <span class="icon-suitcase"></span>
+                                                                                    Baggage
+                                                                                </h4>
+
+                                                                                <small>Free Baggage <strong>20kg</strong></small>
+                                                                            </div>
+
+                                                                            <!-- Radio Button Group -->
+                                                                            <div class="radio-button-group">
+                                                                                <label class="radio-card">
+                                                                                    <span class="body">
+                                                                                        <input class="form-check-input" type="radio" name="psg1_returnBag" id="psg1_returnBag_20" value="20kg" checked>
+                        
+                                                                                        <span class="text-column">
+                                                                                            <span class="title">20kg</span>
+                                                                                            <span class="subtitle">IDR 0</span>
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </label>
+
+                                                                                <label class="radio-card">
+                                                                                    <span class="body">
+                                                                                        <input class="form-check-input" type="radio" name="psg1_returnBag" id="psg1_returnBag_30" value="30kg">
+                        
+                                                                                        <span class="text-column">
+                                                                                            <span class="title">30kg</span>
+                                                                                            <span class="subtitle">IDR 236,775</span>
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </label>
+
+                                                                                <label class="radio-card">
+                                                                                    <span class="body">
+                                                                                        <input class="form-check-input" type="radio" name="psg1_returnBag" id="psg1_returnBag_40" value="40kg">
+                        
+                                                                                        <span class="text-column">
+                                                                                            <span class="title">40kg</span>
+                                                                                            <span class="subtitle">IDR 402,825</span>
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </label>
+                                                                            </div>
+                                                                            
+                                                                            <!-- Helper Text -->
+                                                                            <div class="helper-text">Each piece of baggage should not weight more than 32kg</div>
+                                                                        </section>
+
+                                                                        <!-- Sport Equipment Input Section -->
+                                                                        <section class="input-section">
+                                                                            <!-- Section Label -->
+                                                                            <div class="label-wrapper flex-row align-items-center">
+                                                                                <h4 class="section-label">
+                                                                                    <span class="material-symbols-outlined">sports_golf</span>
+                                                                                    Sport Equipment
+                                                                                </h4>
+                                                                            </div>
+
+                                                                            <!-- Radio Button Group -->
+                                                                            <div class="radio-button-group">
+                                                                                <label class="radio-card">
+                                                                                    <span class="body">
+                                                                                        <input class="form-check-input" type="radio" name="psg1_return_sportEquip" id="psg1_return_sportEquip_0" value="0" checked>
+                        
+                                                                                        <span class="text-column">
+                                                                                            <span class="title">0kg</span>
+                                                                                            <span class="subtitle">IDR 0</span>
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </label>
+
+                                                                                <label class="radio-card">
+                                                                                    <span class="body">
+                                                                                        <input class="form-check-input" type="radio" name="psg1_return_sportEquip" id="psg1_return_sportEquip_15" value="15kg">
+                        
+                                                                                        <span class="text-column">
+                                                                                            <span class="title">15kg</span>
+                                                                                            <span class="subtitle">IDR 99,425</span>
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </label>
+
+                                                                                <label class="radio-card">
+                                                                                    <span class="body">
+                                                                                        <input class="form-check-input" type="radio" name="psg1_return_sportEquip" id="psg1_return_sportEquip_20" value="20kg">
+                        
+                                                                                        <span class="text-column">
+                                                                                            <span class="title">20kg</span>
+                                                                                            <span class="subtitle">IDR 134,275</span>
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </label>
+
+                                                                                <label class="radio-card">
+                                                                                    <span class="body">
+                                                                                        <input class="form-check-input" type="radio" name="psg1_return_sportEquip" id="psg1_return_sportEquip_25" value="25kg">
+                        
+                                                                                        <span class="text-column">
+                                                                                            <span class="title">25kg</span>
+                                                                                            <span class="subtitle">IDR 167,075</span>
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </label>
+
+                                                                                <label class="radio-card">
+                                                                                    <span class="body">
+                                                                                        <input class="form-check-input" type="radio" name="psg1_return_sportEquip" id="psg1_return_sportEquip_30" value="30kg">
+                        
+                                                                                        <span class="text-column">
+                                                                                            <span class="title">30kg</span>
+                                                                                            <span class="subtitle">IDR 283,926</span>
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </label>
+
+                                                                                <label class="radio-card">
+                                                                                    <span class="body">
+                                                                                        <input class="form-check-input" type="radio" name="psg1_return_sportEquip" id="psg1_return_sportEquip_40" value="40kg">
+                        
+                                                                                        <span class="text-column">
+                                                                                            <span class="title">40kg</span>
+                                                                                            <span class="subtitle">IDR 483,800</span>
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </label>
+                                                                            </div>
+
+                                                                            <!-- Helper Text -->
+                                                                            <div class="helper-text">This is inclusive of a 60,000.00 idr sports equipment</div>
+                                                                        </section>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Passenger 2 Baggage Selection -->
+                                                            <div
+                                                                class="tab-pane fade"
+                                                                id="passenger2-tab"
+                                                                aria-labelledby="passenger2-nav"
+                                                                role="tabpanel"
+                                                                tabindex="0"
+                                                            >
+                                                                <div>Passenger 2 Baggage Selection</div>
+                                                            </div>
+
+                                                            <!-- Passenger 3 Baggage Selection -->
+                                                            <div
+                                                                class="tab-pane fade"
+                                                                id="passenger3-tab"
+                                                                aria-labelledby="passenger3-nav"
+                                                                role="tabpanel"
+                                                                tabindex="0"
+                                                            >
+                                                                <div>Passenger 3 Baggage Selection</div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
